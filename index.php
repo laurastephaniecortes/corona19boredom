@@ -28,6 +28,7 @@ Latest Coronavirus Stats:
         if ((!is_array($val))) {
             echo "<p>";
             if ($key == 'confirmed') {
+                $confirmed = $val;
                 echo "Confirmed Cases: ";
                 echo $val;
                 echo "   -->   ";
@@ -37,6 +38,7 @@ Latest Coronavirus Stats:
                 echo "% </b> of people on Earth";
             }
             elseif ($key == 'deaths') {
+                $dead = $val;
                 echo "Deaths: ";
                 echo $val;
                 echo "  -->    ";
@@ -54,10 +56,14 @@ Latest Coronavirus Stats:
                 echo sprintf('%.8f',floatval($percentage))*100;
                 echo "% </b> of people on Earth";
              }
+             
             echo "</p>";
         }
+        
     }
-
+    echo "<br><b>";
+    $deathrate = sprintf('%.2f',floatval($dead/$confirmed)*100);
+    echo "Death Rate: ".$deathrate,"%</b>";
     curl_close($ch);
     echo "<br><br>Today is " . date("m/d/Y") . "<br>";
     
