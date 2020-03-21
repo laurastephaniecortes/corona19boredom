@@ -70,5 +70,7 @@ Latest Coronavirus Stats:
          window.location.reload(true);
         }
 </script>
+<br> <br>
+source: github@laurastephaniecortes
 </body>
 </html>
