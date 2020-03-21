@@ -60,7 +60,7 @@ Latest Coronavirus Stats:
 
     curl_close($ch);
     echo "<br><br>Today is " . date("m/d/Y") . "<br>";
-    echo date("h:i a")."<br>";
+    
 ?>
 
 <input type="button" value="REFRESH" onclick="return RefreshWindow();"/>
